@@ -1,0 +1,21 @@
+{
+  "name": "FlashNews24",
+  "short_name": "FlashNews",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://flashnews24.site/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://flashnews24.site/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

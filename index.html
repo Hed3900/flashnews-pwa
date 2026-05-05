@@ -3,25 +3,35 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { margin:0; background:black; color:white; font-family:Arial; }
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
 
 .container {
-  height:100vh;
-  overflow-y:scroll;
-  scroll-snap-type:y mandatory;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 
 .card {
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:20px;
-  scroll-snap-align:start;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-h2 { font-size:24px; }
-p { color:#ccc; }
+h2 { font-size: 24px; }
+p { color: #ccc; }
 </style>
 </head>
 
@@ -31,17 +41,17 @@ p { color:#ccc; }
 
 <div class="card">
 <h2>🔥 Breaking News</h2>
-<p>Germany incident latest updates...</p>
+<p>Multiple injuries reported in Carrollton Koreatown shooting...</p>
 </div>
 
 <div class="card">
 <h2>🌍 World News</h2>
-<p>Global updates and events...</p>
+<p>Car ploughs into crowd in Germany; 2 dead, 22 injured...</p>
 </div>
 
 <div class="card">
 <h2>⚡ Latest</h2>
-<p>More updates coming soon...</p>
+<p>Boat capsizes in storm, rescue ongoing...</p>
 </div>
 
 </div>

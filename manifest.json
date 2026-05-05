@@ -1,7 +1,8 @@
 {
   "name": "FlashNews24",
   "short_name": "FlashNews",
-  "start_url": "/",
+  "start_url": "https://flashnews24.site/",
+  "scope": "https://flashnews24.site/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",

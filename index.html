@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
   margin: 0;
-  overflow: hidden;
-  font-family: Arial;
   background: black;
   color: white;
+  font-family: Arial;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  height: 100vh;
-  width: 100vw;
   overflow-x: scroll;
+  height: 100vh;
   scroll-snap-type: x mandatory;
 }
 
 .card {
   min-width: 100vw;
   height: 100vh;
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 20px;
   box-sizing: border-box;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-position: center;
 }
 
-h2 { font-size: 24px; }
+.overlay {
+  background: linear-gradient(transparent, black);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 { font-size: 22px; }
 p { color: #ccc; }
 </style>
-</head>
-
-<body>
 
 <div class="container">
 
-<div class="card">
-<h2>🔥 Breaking News</h2>
-<p>Multiple injuries reported in Carrollton Koreatown shooting...</p>
+<div class="card" style="background-image:url('https://via.placeholder.com/600')">
+  <div class="overlay">
+    <h2>🔥 Breaking News</h2>
+    <p>Multiple injuries reported in Carrollton Koreatown shooting...</p>
+  </div>
 </div>
 
-<div class="card">
-<h2>🌍 World News</h2>
-<p>Car ploughs into crowd in Germany; 2 dead, 22 injured...</p>
-</div>
-
-<div class="card">
-<h2>⚡ Latest</h2>
-<p>Boat capsizes in storm, rescue ongoing...</p>
+<div class="card" style="background-image:url('https://via.placeholder.com/600')">
+  <div class="overlay">
+    <h2>🌍 World News</h2>
+    <p>Car ploughs into crowd in Germany; 2 dead, 22 injured...</p>
+  </div>
 </div>
 
 </div>

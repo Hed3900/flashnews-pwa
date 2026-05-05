@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My News Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { margin:0; background:black; color:white; font-family:Arial; }
+
+.container {
+  height:100vh;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+}
+
+.card {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:20px;
+  scroll-snap-align:start;
+}
+
+h2 { font-size:24px; }
+p { color:#ccc; }
+</style>
 </head>
+
 <body>
-  <h1>🔥 Welcome Bava News</h1>
-  <p>Your site is working 💯</p>
+
+<div class="container">
+
+<div class="card">
+<h2>🔥 Breaking News</h2>
+<p>Germany incident latest updates...</p>
+</div>
+
+<div class="card">
+<h2>🌍 World News</h2>
+<p>Global updates and events...</p>
+</div>
+
+<div class="card">
+<h2>⚡ Latest</h2>
+<p>More updates coming soon...</p>
+</div>
+
+</div>
+
 </body>
 </html>

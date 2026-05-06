@@ -9,15 +9,14 @@
   "theme_color": "#000000",
   "orientation": "portrait",
   "icons": [
-    {
-      "src": "https://flashnews24.site/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://flashnews24.site/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
+  {
+    "src": "https://hed3900.github.io/flashnews-pwa/icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "https://hed3900.github.io/flashnews-pwa/icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]

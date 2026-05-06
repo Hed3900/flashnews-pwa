@@ -1,80 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flash News</title>
+
+<meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
   margin: 0;
+  font-family: Arial;
   background: black;
   color: white;
-  font-family: Arial;
   overflow: hidden;
 }
 
+/* swipe container */
 .container {
   display: flex;
   overflow-x: scroll;
-  height: 100vh;
   scroll-snap-type: x mandatory;
+  height: 100vh;
 }
 
+/* each news card */
 .card {
   min-width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  box-sizing: border-box;
+  position: relative;
   scroll-snap-align: start;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
+/* dark overlay */
 .overlay {
   background: linear-gradient(transparent, black);
   padding: 20px;
-  border-radius: 10px;
 }
 
-h2 { font-size: 22px; }
-p { color: #ccc; }
+/* title */
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* description */
+p {
+  color: #ccc;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #ff3d00;
+  color: white;
+  font-size: 14px;
+}
 </style>
 
+</head>
+
+<body>
+
 <div class="container">
+
+<!-- NEWS 1 -->
 <div class="card" style="background-image:url('https://via.placeholder.com/600')">
   <div class="overlay">
     <h2>🔥 Breaking News</h2>
-    <p>Multiple injuries reported in Carrollton Koreatown shooting...</p>
+    <p>Major incident reported. Full details coming soon...</p>
+
+    <div class="buttons">
+      <button onclick="share()">🔗 Share</button>
+    </div>
   </div>
 </div>
 
+<!-- NEWS 2 -->
 <div class="card" style="background-image:url('https://via.placeholder.com/600')">
   <div class="overlay">
     <h2>🌍 World News</h2>
-    <p>Car ploughs into crowd in Germany; 2 dead, 22 injured...</p>
+    <p>Global updates and major international events...</p>
+
+    <div class="buttons">
+      <button onclick="share()">🔗 Share</button>
+    </div>
   </div>
 </div>
-<button onclick="shareNews()">Share</button>
+
+<!-- NEWS 3 -->
+<div class="card" style="background-image:url('https://via.placeholder.com/600')">
+  <div class="overlay">
+    <h2>⚡ Latest Update</h2>
+    <p>Stay tuned for more breaking updates...</p>
+
+    <div class="buttons">
+      <button onclick="share()">🔗 Share</button>
+    </div>
+  </div>
+</div>
+
+</div>
 
 <script>
-function shareNews(){
+function share(){
   if(navigator.share){
     navigator.share({
       title: "Flash News",
+      text: "Check latest news",
       url: window.location.href
     });
+  } else {
+    alert("Share not supported");
   }
 }
 </script>
-</div>
-<script>
-setInterval(()=>{
-  location.reload();
-}, 60000); // every 1 min refresh
-</script>
+
 </body>
 </html>
